@@ -1,0 +1,52 @@
+@model UserViewModel
+
+<h1>Register</h1>
+<form asp-action="Register" asp-Controller="User" method="post">
+    <div class="form-group">
+      <label asp-for="NewUser.FirstName"></label>
+      <input asp-for="NewUser.FirstName" class="form-control">
+      <span asp-validation-for="NewUser.FirstName" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+      <label asp-for="NewUser.LastName"></label>
+      <input asp-for="NewUser.LastName" class="form-control">
+      <span asp-validation-for="NewUser.LastName" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+      <label asp-for="NewUser.Email"></label>
+      <input asp-for="NewUser.Email" class="form-control">
+      <span asp-validation-for="NewUser.Email" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+      <label asp-for="NewUser.Password"></label>
+      <input asp-for="NewUser.Password" class="form-control">
+      <span asp-validation-for="NewUser.Password" class="text-danger"></span>
+    
+    </div>
+        <div class="form-group">
+      <label asp-for="NewUser.ConfirmPassword"></label>
+      <input asp-for="NewUser.ConfirmPassword" class="form-control">
+      <span asp-validation-for="NewUser.ConfirmPassword" class="text-danger"></span>
+    </div>
+    
+    <button type="submit">Submit</button>
+</form>
+<h1>Login</h1>
+<form asp-action="Login" asp-Controller="User" method="post">
+    <div class="form-group">
+      <label asp-for="ExistingUser.LoginEmail"></label>
+      <input asp-for="ExistingUser.LoginEmail" class="form-control">
+      <span asp-validation-for="ExistingUser.LoginEmail" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+      <label asp-for="ExistingUser.LoginPassword"></label>
+      <input asp-for="ExistingUser.LoginPassword" class="form-control">
+      <span asp-validation-for="ExistingUser.LoginPassword" class="text-danger"></span>
+    </div>
+    
+    <button type="submit">Submit</button>
+</form>
